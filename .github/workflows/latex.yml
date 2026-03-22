@@ -3,7 +3,7 @@ name: Build LaTeX PDF
 on:
   push:
     paths:
-      - '**.tex'
+      - "**.tex"
 
 jobs:
   build:
@@ -23,3 +23,12 @@ jobs:
         with:
           name: pdf
           path: main.pdf
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest PDF
+          files: main.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
