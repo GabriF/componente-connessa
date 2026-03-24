@@ -1,6 +1,6 @@
 <div align="center">
 
-![Componente Connessa](background.png)
+![Componente Connessa](assets/background.png)
 
 # Componente Connessa
 
